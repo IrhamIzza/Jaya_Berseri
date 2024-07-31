@@ -12,10 +12,17 @@
     <header class="masthead">
         <div class="container position-relative">
             <div class="row justify-content-center">
-                <div class="col-xl-6">
-                    <div class="text-center text-white">
-                        <!-- Page heading-->
-                        <h1 class="mb-5">Kami membantu anda dalam menangani kelangkaan pupuk subsidi</h1>
+                <div class="row">
+                    <div class="col-md-7">
+                        <p class="judul ">PT JAYA BERSERI</p>
+                        <p class="paragraf1">Kami membantu anda dalam menangani kelangkaan pupuk subsidi. Kami adalah
+                            perusahaan pupuk pertanian dan
+                            perkebunan yang turut serta membantu petani dalam mengatasi kelangkaan pupuk subsidi seiring
+                            di
+                            kuranginya kuota pupuk bersubsidi dari pemerintah.</p>
+                    </div>
+                    <div class="col-md-5 ">
+                        <img class="gh1" src="../assets/img/bg.png" alt="" width="550px">
                     </div>
                 </div>
             </div>
@@ -27,34 +34,47 @@
     <!-- About Section-->
     <section class="page-section bg-dark text-white m-2 " id="about">
         <div class="container">
-            <!-- About Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-white pt-2">Tentang Kami</h2>
-            <!-- About Section Content-->
-            <div class="row">
-                <div class="col-lg-6 ms-auto">
-                    <p class="lead">Kami adalah perusahaan pupuk pertanian dan perkebunan yang turut serta membantu
-                        petani dalam
-                        mengatasi kelangkaan pupuk subsidi seiring di kuranginya
-                        kuota pupuk bersubsidi dari pemerintah.
-                        Kami menyediakan pupuk alternatif
-                        yang berkualitas dengan harga yang terjangkau oleh
-                        masyarakat petani,Karakter pupuk kami adalah mengandung unsur yang lengkap dan seimbang antara
-                        unsur makro dan mikro
-                        sesuai dengan yang di butuhkan tanaman.
-                    </p>
+            <div class="row pt-4">
+                <div class="col-md-6">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                <img class="g_about1" src="../assets/img/vertical.jpg" alt="" width="250" height="425">
+                            </div>
+                            <div class="col-6">
+                                <img class="g_about2 pb-3" src="../assets/img/hori1.jpg" alt="" width="250">
+                                <img class="g_about2" src="../assets/img/hori2.jpg" alt="" width="250">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-6 me-auto">
-                    <p class="lead">
-                        Produk kami sudah teruji sejak tahun 1988, Dari pengalaman kami di lapangan pupuk kami bisa
-                        meningkat hasil panen sekitar 20% . Tentu nya
-                        dengan standar dosis kami sesuai dengan jenis tanaman. Kami berkomitmen memberikan kepuasan
-                        petani berupa
-                        kesehatan tanaman dan peningkatan hasil panen. Kami memberikan garansi mutu yang bisa di
-                        tuangkan dalam
-                        perjanjian tertulis dengan petani/konsumen. Dengan catatan bukan di atas tanah yang selalu
-                        mengeluarkan air
-                        dan tidak bisa mengering ( bahasa Jawa tanah becer).
-                    </p>
+                <div class="col-md-6">
+                    <div class="container">
+                        <h2 class="page-section-heading text-center text-uppercase text-white pt-2">Tentang Kami</h2>
+                        <p class="lead">Kami adalah perusahaan pupuk pertanian dalam
+                            mengatasi kelangkaan pupuk subsidi dari pemerintah.
+                            Kami menyediakan pupuk alternatif
+                            yang berkualitas dengan harga yang terjangkau oleh
+                            masyarakat petani,Karakter pupuk kami adalah mengandung unsur yang lengkap dan seimbang
+                            antara
+                            unsur makro dan mikro
+                            sesuai dengan yang di butuhkan tanaman.
+                        </p>
+                        <p class="lead">
+                            Produk kami sudah teruji sejak tahun 1988, Dari pengalaman kami di lapangan pupuk kami
+                            bisa
+                            meningkat hasil panen sekitar 20% . Tentu nya
+                            dengan standar dosis kami sesuai dengan jenis tanaman. Kami berkomitmen memberikan
+                            kepuasan
+                            petani berupa
+                            kesehatan tanaman dan peningkatan hasil panen. Kami memberikan garansi mutu yang bisa di
+                            tuangkan dalam
+                            perjanjian tertulis dengan petani/konsumen. Dengan catatan bukan di atas tanah yang
+                            selalu
+                            mengeluarkan air
+                            dan tidak bisa mengering ( bahasa Jawa tanah becer).
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
