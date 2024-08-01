@@ -33,24 +33,25 @@
     @section('content')
     <!-- About Section-->
     <section class="page-section bg-dark text-white m-2 " id="about">
-        <div class="container">
+        <div class="container ">
             <div class="row pt-4">
                 <div class="col-md-6">
-                    <div class="container">
+                    <div class="container text-center">
                         <div class="row">
                             <div class="col-6">
-                                <img class="g_about1" src="../assets/img/vertical.jpg" alt="" width="250" height="425">
+                                <img class="g_about1 rounded" src="../assets/img/vertical.jpg" alt="" width="250">
                             </div>
                             <div class="col-6">
-                                <img class="g_about2 pb-3" src="../assets/img/hori1.jpg" alt="" width="250">
-                                <img class="g_about2" src="../assets/img/hori2.jpg" alt="" width="250">
+                                <img class="g_about2 pb-3 rounded" src="../assets/img/hori1.jpg" alt="" width="250">
+                                <img class="g_about2 rounded" src="../assets/img/hori2.jpg" alt="" width="250">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="container">
-                        <h2 class="page-section-heading text-center text-uppercase text-white pt-2">Tentang Kami</h2>
+                    <div class="container about">
+                        <h2 class="page-section-heading text-center text-uppercase text-white pt-2 judul2">Tentang Kami
+                        </h2>
                         <p class="lead">Kami adalah perusahaan pupuk pertanian dalam
                             mengatasi kelangkaan pupuk subsidi dari pemerintah.
                             Kami menyediakan pupuk alternatif
@@ -81,30 +82,41 @@
     </section>
 
     <!-- Kelebihan Section-->
-    <section class="page-section bg-dark text-white m-2 " id="about">
-        <div class="container">
+    <section class="container p-2" id="about">
+        <div class="container ">
             <!-- About Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-white pt-2">Kelebihan</h2>
+            <h2 class="text-center text-uppercase text-black ">Kelebihan</h2>
             <!-- About Section Content-->
-            <div class="row ">
-                <div class="col-lg-6 ms-auto">
-                    <p class="lead">
-                        Kelebihan dari pupuk kami adalah mudah larut sehingga mudah di serap oleh tanaman sehingga bisa
-                        maximal penyerapan tanaman.
-                        Di samping itu dengan kandungan yang seimbang antara unsur makro dan mikro yang mudah larut
-                        secara otomatis akan membuat tanah menjadi gembur sehingga oxigen bisa leluasa masuk dan
-                        pernafasan tanaman bisa maksimal.
-                    </p>
-                </div>
-                <div class="col-lg-6 me-auto">
-                    <p class="lead">
-                        Pada akhirnya akan membuat tanaman menjadi sehat, tahan terhadap serangan hama dan hasil
-                        panen akan meningkat. Kelebihan
-                        dari pupuk kami untuk tanaman padi bisa meningkatkan hasil panen karena seluruh bulir terisi
-                        penuh dan tidak
-                        ada bulir yang hampa/ kosong. Sedangkan untuk tanaman hortikultura semangka melon cabe dll
-                        buahnya lebih tahan lama/ tidak mudah membusuk
-                    </p>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="assets/img/serap.PNG" alt="Gambar 1" width="100px">
+                            <h3 class="pt-2">Mudah Larut</h3>
+                            <p class="lead">Mudah larut sehingga mudah di serap oleh tanaman sehingga bisa maximal penyerapan tanaman</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="assets/img/meningkatkan.PNG" alt="Gambar 1" width="100px">
+                            <h3 class="pt-2">Meningkatkan Hasil</h3>
+                            <p class="lead">Meningkatkan hasil panen karena seluruh bulir terisi penuh dan tidak ada bulir yang hampa/ kosong</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card ">
+                            <img src="assets/img/kandungan.png" alt="Gambar 1" width="100px">
+                            <h3 class="pt-2">Kandungan Seimbang</h3>
+                            <p class="lead overflow-auto">Seimbang antara unsur makro dan mikro yang mudah larut secara otomatis akan membuat tanah menjadi gembur sehingga oxigen bisa leluasa masuk dan pernafasan tanaman bisa maksimal</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="assets/img/perisai.jpg" alt="Gambar 1" width="100px">
+                            <h3 class="pt-2">Tahan Lama</h3>
+                            <p class="lead">Tanaman hortikultura semangka melon cabe dll buahnya lebih tahan lama/ tidak mudah membusuk</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -132,6 +144,24 @@
                 </div>
             </div>
     </section>
+
+    <script src="swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        breakpoints: {
+            376: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+        },
+        // autoplay: {
+        //     delay: 5000,
+        // },
+        });
+    </script>
     @endsection
 </body>
 
