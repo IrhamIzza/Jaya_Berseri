@@ -10943,7 +10943,7 @@ footer.footer {
 }
 
 .lead {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 300;
 }
 
@@ -10997,15 +10997,6 @@ footer.footer {
   }
   .gh1{
     display: none;
-  }
-  .g_about1{
-    height: 180px;
-    width: fit-content;
-    margin-left: 2px;
-  }
-  .g_about2{
-    height: fit-content;
-    width: 120px;
   }
   .lead{
     font-size: 15px;
