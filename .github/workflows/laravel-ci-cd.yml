@@ -1,51 +1,43 @@
-name: Laravel CI/CD Pipeline
+name: Deploy Laravel to AnyHost
 
 on:
   push:
     branches:
-      - master
-
+      - master  # atau branch yang Anda pilih untuk deploy otomatis
 
 jobs:
-  deploy:
-    runs-on: ubuntu-22.04	
+  build:
+    runs-on: ubuntu-22.04
 
     steps:
-    # Step 1: Checkout repository
-    - name: Checkout Code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    # Step 2: Install PHP, Composer, dan ekstensi yang dibutuhkan
-    - name: Setup PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: '8.2' # Sesuaikan dengan versi PHP Laravel Anda
-        extensions: mbstring, bcmath, intl, pdo, mysql
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'  # Ganti dengan versi PHP yang sesuai dengan hosting Anda
 
-    # Step 3: Install dependencies Laravel
-    - name: Install Dependencies
-      run: composer install --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
+      - name: Install Composer Dependencies
+        run: |
+          curl -sS https://getcomposer.org/installer | php
+          php composer.phar install --no-dev --optimize-autoloader
 
-    # Step 4: Run Tests
-    # - name: Run Tests
-    #   env:
-    #     APP_ENV: testing
-    #   run: ./vendor/bin/phpunit
+      # - name: Run Laravel migrations (optional)
+      #   run: |
+      #     php artisan migrate --force
 
-    # Deploy to server
-    - name: Deploy to AnyHost via SSH
-      env:
-        HOST: ${{ secrets.ANYHOST_SSH_HOST }}
-        USER: ${{ secrets.ANYHOST_SSH_USER }}
-        KEY: ${{ secrets.ANYHOST_SSH_KEY }}
-      run: |
-        echo "$KEY" > private_key.pem
-        chmod 600 private_key.pem
-        rsync -avz -e "ssh -i private_key.pem -o StrictHostKeyChecking=no" --exclude 'node_modules' --exclude '.git' ./ $USER@$HOST:/path/to/your/app
-        ssh -i private_key.pem -o StrictHostKeyChecking=no $USER@$HOST << 'EOF'
-          cd /path/to/your/app
-          composer install --no-dev
-          php artisan migrate --force
+      - name: Upload to AnyHost via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          ftp-server: ${{ secrets.FTP_SERVER }}
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./  # Path ke folder Laravel Anda
+          server-dir: /public_html/  # Path ke direktori tujuan di server AnyHost
+
+      - name: Clear cache (optional)
+        run: |
           php artisan config:cache
           php artisan route:cache
-        EOF
+          php artisan view:cache
