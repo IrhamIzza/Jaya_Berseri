@@ -35,6 +35,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./  # Path ke folder Laravel Anda
           server-dir: /public_html1/  # Path ke direktori tujuan di server AnyHost
+          port: 21
         # with:
         #   ftp-server: ${{ secrets.FTP_SERVER }}
         #   ftp-username: ${{ secrets.FTP_USERNAME }}
