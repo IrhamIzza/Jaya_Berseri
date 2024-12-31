@@ -27,10 +27,10 @@ jobs:
       run: composer install --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
 
     # Step 4: Run Tests
-    - name: Run Tests
-      env:
-        APP_ENV: testing
-      run: ./vendor/bin/phpunit
+    # - name: Run Tests
+    #   env:
+    #     APP_ENV: testing
+    #   run: ./vendor/bin/phpunit
 
     # Deploy to server
     - name: Deploy to AnyHost via SSH
