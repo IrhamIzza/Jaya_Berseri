@@ -19,7 +19,7 @@ jobs:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.2' # Sesuaikan dengan versi PHP Laravel Anda
+        php-version: '8.3' # Sesuaikan dengan versi PHP Laravel Anda
         extensions: mbstring, bcmath, intl, pdo, mysql
 
     # Step 3: Install dependencies Laravel
